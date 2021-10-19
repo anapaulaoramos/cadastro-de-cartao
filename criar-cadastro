@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+#include <string.h>
+
+
+int main(){
+	
+	setlocale (LC_ALL,"");
+	char cliente [100];
+	int opcao;
+	int cpf;
+	
+	printf("Digite seu nome:\n");
+	scanf("%s", &cliente);
+	fflush(stdin);
+
+	
+	printf("Voce ja possui nosso cartão?\n Escolha uma das oções abaixo:\n 1- Sim\n 2- Não\n 3- Sair\n");
+    scanf("%d", &opcao);
+	
+		switch(opcao){
+		
+		case 1:
+			printf("Obrigada, boas compras!!",opcao);
+		
+		break;
+		
+		case 2:
+			printf("\nDeseja realizar nosso cadastro? \n 1- Sim\n 2- Não\n");
+		    scanf("%d", &opcao);
+		    if(opcao==1){
+			
+		    printf("Ok, vamos fazer cadastro\n ");
+			printf("\nDigite seu cpf: ");
+			scanf("%d",&cpf);
+			printf("\nCadastro realizado com sucesso!");}
+			else if (opcao >=1)
+			
+			printf("Obrigada pela sua participação!");
+			
+		break;
+		
+		case 3:
+			
+			 printf ("\nObrigada pela sua participação!",opcao);
+			 
+	    break;
+			 
+	
+		
+				
+		return 0;
+		
+	}
+}
